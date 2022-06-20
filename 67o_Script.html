@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Recebendo dados do formulário</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+ <form method="post" action = "receber_form.php">  <!–Aqui chamamos método post e atribuimos a receber_form.php que vai receber os dados e mandar para um servidor –>
+   Digite seu nome:<br/>   <!– Imprime na tela a frase –>
+
+   <input type = "text" name = "nome" /> <br/>  <!– Requisita texto e tem o nome do campo é nome –>
+
+   Digite seu bairro:<br/>  <!– Imprime na tela a frase –>
+
+   <input type = "text" name = "bairro" /> <!– Requisita texto e tem o nome do campo é bairro –>
+
+   <input type = "submit" value = "Enviar" /> <!– Requisita submit e o nome do campo é enviar –>
+     </form>
+  </body>
+
+</html>
