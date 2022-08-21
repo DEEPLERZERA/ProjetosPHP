@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Aboreto&family=DynaPuff&family=Lobster&family=Prompt:ital,wght@0,100;1,100&family=Silkscreen&display=swap');
+      body {
+        background-color : #99ccff;
+      }
+
+      main h1 {
+        font-size: 40px; 
+        
+        font-family: 'DynaPuff', cursive;
+ 
+      }
+
+      #cancelar {
+        font-size: 15px; 
+
+        font-family: 'Silkscreen', cursive;
+
+        border-radius: 8px;
+
+        
+      }
+
+      #cancelar:hover {
+        background-color: darkgray;
+      }
+
+      #enviar {
+        font-size: 15px;
+
+        font-family: 'Silkscreen', cursive;
+
+         border-radius: 8px;
+      }
+
+      #enviar:hover {
+        background-color: darkgray;
+      }
+
+      #areadetexto {
+        border-radius: 15px;
+      }
+    </style>
     <title>FormsDaVida</title>
     <meta charset="utf-8">
   </head>
   <body>
-    <h1> Cadastro de Clientes </h1>
+    <main>
+    <h1 id = "titulo"> Cadastro de Clientes </h1>
+  </main>
     <form>
       Nome
       <input type="text">
@@ -42,26 +87,41 @@
         <option value="maisde6">Mais de 6</option>
       </select>
       Peso
-      <input type="range">
+      <input type="range" list="marcacoes">
+        <datalist id="marcacoes">
+          <option value="0" label="0%"></option>
+          <option value="10"></option>
+          <option value="20"></option>
+          <option value="30"></option>
+          <option value="40"></option>
+          <option value="50" label="50%"></option>
+          <option value="60"></option>
+          <option value="70"></option>
+          <option value="80"></option>
+          <option value="90"></option>
+          <option value="100" label="100%"></option>
+        </datalist>
+        55
       <br>
       <br>
       Sexo:
       <br>
       <br>
-        <input type="radio">
-        Masculino
-        &nbsp
-        &nbsp
-        <br>
-        <input type="radio">
-        Feminino
-        &nbsp
-        &nbsp
+      <div>
+
+        
+        Masculino <input type="radio" id="masculino" name="sexo" value="masculino" >
+        <br> Femino <input type="radio" id="Feminino" name="sexo" value="feminino"> 
+       
+        </div>
         <br>
         <br>
         Estado (sudeste) 
         <select name="estados" size="1">
         <option value="SP">SP</option>
+        <option value="RJ">RJ</option>
+        <option value="ES">ES</option>
+        <option value="MG">MG</option>
         </select>
         <br>
         <br>
@@ -70,8 +130,8 @@
         <textarea id="areadetexto" name="areadetexto" rows="8" cols="70"> </textarea>
         <br>
         <br>
-        <button>Cancelar </button>
-        <button>Enviar </button>
+        <button id="cancelar">Cancelar </button>
+        <button id="enviar">Enviar </button>
     </form>
   </body>
 </html>
